@@ -4,11 +4,9 @@ import Users from './Users';
 
 const Home = () => {
   return (
-    <div className="container">
-      <div className="mt-4">
-        <Users />
-      </div>
-    </div >
+    <div>
+
+    </div>
   )
 }
 

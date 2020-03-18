@@ -1,12 +1,28 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+
 import Home from './Pages/Home';
+import Users from './Pages/Users';
+import UserDetails from './Pages/UserDetails';
+import Posts from './Pages/Posts';
+import Albums from './Pages/Albums';
+
+import NavBar from './Components/NavBar';
 
 function App() {
   return (
-    <Switch>
-      <Route path="/" component={Home} exact />
-    </Switch>
+    <div>
+      <NavBar />
+      <div className="container">
+        <Switch>
+          <Route path="/" component={Home} exact />
+          <Route path="/users" component={Users} exact />
+          <Route path="/users/:userId" component={UserDetails} />
+          <Route path="/posts" component={Posts} />
+          <Route path="/albums" component={Albums} />
+        </Switch>
+      </div>
+    </div>
   );
 }
 

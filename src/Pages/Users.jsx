@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Users extends Component {
 
@@ -27,7 +28,7 @@ class Users extends Component {
     }
 
     return (
-      <div className="">
+      <div className="mt-4">
         {
           this.state.users.map((user) => (
             <div className="card mb-3" style={cardWidth} key={user.id}>
@@ -43,7 +44,9 @@ class Users extends Component {
                     <p className="card-text">{user.website}</p>
                     <p className="card-text">
                       <small className="text-muted">
-                        <a href="#">view details -></a>
+                        <Link to={`/users/${user.id}`}>
+                          view details ->
+                        </Link>
                       </small>
                     </p>
                   </div>
